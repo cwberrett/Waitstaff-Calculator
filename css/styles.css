@@ -1,0 +1,30 @@
+/*general styles*/
+
+body {
+    font-size: 1.3rem;
+}
+
+.padded {
+    padding: 0.5rem;
+    border: 1px solid black;
+    margin-top: 1.5rem;
+}
+
+
+/*
+.marginSmall {
+    margin-left: 1rem;
+}
+
+.marginBig {
+    margin-left: 2rem;
+}
+*/
+
+.row {
+    margin: 1rem auto;
+}
+
+.center {
+    text-align: center;
+}
