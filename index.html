@@ -15,12 +15,16 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1>Waitstaff Calculator</h1>
+                <h1 class="center">Waitstaff Calculator</h1>
             </div>
             <div class="row">
-                <form name="calcForm" ng-submit="vm.submit()" class="col-sm-6" novalidate>
+                <form id="waitForm" name="calcForm" ng-submit="vm.submit()" class="col-sm-6" novalidate>
                     <div class="padded">
-                        <h4>Enter the Meal Details</h4>
+                        <div class="row border-bottom">
+                            <div class="col-xs-12">
+                                <h4 class="center">Enter the Meal Details</h4>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-xs-6">
                                 <label>Base Meal Price:</label>
@@ -49,11 +53,11 @@
                             </div>
                         </div>
                         <div class="row center">
-                            <div class="col-xs-6">
-                                <input type="submit" value="Submit">
+                            <div class="col-xs-4 col-xs-offset-2">
+                                <input class="btn-margin" type="submit" value="Submit">
                             </div>
-                            <div class="col-xs-6">
-                                <button type="button">Cancel</button>
+                            <div class="col-xs-4">
+                                <button class="btn-margin" type="button" ng-click="vm.cancel()">Cancel</button>
                             </div>
                         </div>
                     </div>
@@ -61,9 +65,9 @@
                 <div class="col-sm-6">
                     <div>
                         <div class="row padded">
-                            <div class="row">
+                            <div class="row border-bottom">
                                 <div class="col-xs-12">
-                                    <h4>Customer Charges</h4>
+                                    <h4 class="center">Customer Charges</h4>
                                 </div>
                             </div>
                             <div class="row">
@@ -78,14 +82,14 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <label>Total:&nbsp; </label><span>${{vm.total}}</span>
+                                    <label>Total:&nbsp; </label><span>${{vm.total | currency}}</span>
                                 </div>
                             </div>
                         </div>
                         <div class="row padded">
-                            <div class="row">
+                            <div class="row border-bottom">
                                 <div class="col-xs-12">
-                                    <h4>My Earnings Info</h4>
+                                    <h4 class="center">My Earnings Info</h4>
                                 </div>
                             </div>
                             <div class="row">
@@ -107,6 +111,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="col-xs-2 col-xs-offset-9">
+            <button ng-click="vm.reset()">Reset</button>
         </div>
     </div>
 

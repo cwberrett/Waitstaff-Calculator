@@ -10,16 +10,9 @@ body {
     margin-top: 1.5rem;
 }
 
-
-/*
-.marginSmall {
-    margin-left: 1rem;
+form {
+    margin-top: -0.5rem;
 }
-
-.marginBig {
-    margin-left: 2rem;
-}
-*/
 
 .row {
     margin: 1rem auto;
@@ -27,4 +20,18 @@ body {
 
 .center {
     text-align: center;
+}
+
+input,
+button {
+    width: 7rem;
+}
+
+.btn-margin {
+    margin-top: 6rem;
+    margin-bottom: 8.5rem;
+}
+
+.border-bottom {
+    border-bottom: 1px solid black;
 }
