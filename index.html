@@ -72,17 +72,17 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <label>Subtotal:&nbsp; </label><span>${{vm.subTot}}</span>
+                                    <label>Subtotal:&nbsp; </label><span>{{vm.subTot | currency}}</span>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <label>Tip:&nbsp; </label><span>${{vm.tip}}</span>
+                                    <label>Tip:&nbsp; </label><span>{{vm.tip | currency}}</span>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <label>Total:&nbsp; </label><span>${{vm.total | currency}}</span>
+                                    <label>Total:&nbsp; </label><span>{{vm.total | currency}}</span>
                                 </div>
                             </div>
                         </div>
@@ -94,7 +94,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <label>Tip Total:&nbsp; </label><span>${{vm.tipTot}}</span>
+                                    <label>Tip Total:&nbsp; </label><span>{{vm.tipTot | currency}}</span>
                                 </div>
                             </div>
                             <div class="row">
@@ -104,7 +104,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <label>Avg Tip/Meal:&nbsp; </label><span>${{vm.tipAverage}}</span>
+                                    <label>Avg Tip/Meal:&nbsp; </label><span>{{vm.tipAverage | currency}}</span>
                                 </div>
                             </div>
                         </div>
@@ -112,8 +112,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-2 col-xs-offset-9">
-            <button ng-click="vm.reset()">Reset</button>
+        <div class="row">
+            <div class="col-xs-2 col-xs-offset-9">
+                <button ng-click="vm.reset()">Reset</button>
+            </div>
         </div>
     </div>
 

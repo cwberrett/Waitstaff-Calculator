@@ -3,17 +3,17 @@ angular.module('waitCalc', ['ngMessages'])
         //allows the controller as sytax
         var vm = this;
         //variable to track the number of meals eaen
-        vm.mealCount;
+        vm.mealCount = 0;
         //variable to tack total amount of tips
-        vm.tipTot;
+        vm.tipTot = 0;
         //function to intercept form data
         vm.submit = function () {
                 //calculate tax
                 vm.tax = addPercent(vm.basePrice, vm.taxRate);
                 //calculate tip
-                vm.tip = Math.round(addPercent(vm.basePrice, vm.tipPer) * 100) / 100;
+                vm.tip = addPercent(vm.basePrice, vm.tipPer);
                 //calculate subtotal
-                vm.subTot = Math.round((vm.basePrice + vm.tax) * 100) / 100;
+                vm.subTot = vm.basePrice + vm.tax;
                 //calculate total
                 vm.total = vm.subTot + vm.tip;
                 //calculate tip total
