@@ -22,6 +22,9 @@ angular.module('waitCalc', ['ngMessages'])
                 vm.mealCount++;
                 //calculate average tip per meal
                 vm.tipAverage = vm.tipTot / vm.mealCount;
+                vm.basePrice = 0;
+                vm.taxRate = 0;
+                vm.tipPer = 0
             }
             //clears enter meal form when cancel button is clicked
         vm.cancel = function () {
